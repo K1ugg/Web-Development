@@ -1,0 +1,255 @@
+<!-- Accessibility practice: 
+  - Provided alt attributes for images to improve screen reader compatibility.
+  - Design uses contrasting color to ensure readability.
+  - Clear font sizes to improve legibility.
+
+    Additional item/s:
+  1. Sticky Navbar- The navigation bar remains visible as users scroll, improving accessibility and ease of use.
+  2. Use of Shadow and Box Styling- Adds depth and smoothedges for a modern look.
+  3. Gradient Background- Creates a visually appealing transition from white to gold.
+  4. Intro/ Tutorial Video- A step-by-step guide on how to access and use the Faith & Focus Digital Planner after purchase.
+
+    Ideation & Planning
+  - Yes, a detailed planning phase was used. Before building the site, I created desktop wireframes and site map to ensure a structured, user-friendly design.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stay organized with our customizable digital planner- perfect for professionals, students and entrepreneurs"
+    />
+    <title>Best Digital Planner for Productivity & Organization</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/brand-logo-1-digital-planner.png"
+    />
+  </head>
+  <body>
+    <!--header section-->
+    <header class="header">
+      <div class="logoAndName">
+        <div class="logo">
+          <img
+            src="img/brand-logo-1-digital-planner.png"
+            alt="Faith & Focus Logo"
+            style="width: 100px;"
+          />
+        </div>
+        <div style="text-align: left;">
+          <a href="index.html">
+            <h2>
+              FAITH &
+              <br />
+              FOCUS
+            </h2>
+          </a>
+        </div>
+      </div>
+      <div class="cart">
+        <a href="cart.html">
+          <button class="cart-button">
+            <!-- Source: https://iconape.com/shopping-9-logo-icon-svg-png.html -->
+            <img
+              src="img/faith-focus-planner-cart.png"
+              alt="Shopping Cart Icon"
+              style="width: 40px;"
+            />
+          </button>
+        </a>
+      </div>
+    </header>
+    <!--navigation bar-->
+    <div class="navbar">
+      <ul class="nav-ul">
+        <li class="nav-li">
+          <a href="index.html">HOME</a>
+        </li>
+        <li class="nav-li">
+          <a href="about.html">ABOUT</a>
+        </li>
+        <li class="nav-li">
+          <a href="events.html">EVENTS</a>
+        </li>
+        <li class="nav-li">
+          <a href="contact.html">CONTACT</a>
+        </li>
+        <li class="nav-li">
+          <a href="products.html">PRODUCTS</a>
+        </li>
+      </ul>
+    </div>
+
+    <!--main content-->
+    <div class="section group">
+      <div class="mainContainer" style="display: flex; gap: 5px;">
+        <div class="col span_6_of_12">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="video">
+            <video style="width: 100%" controls>
+              <source
+                src="img/best-digital-planner-tutorial-preview.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+        <div class="col span_6_of_12">
+          <div
+            class="textContent"
+            style="flex: 1; margin: 25px; padding: 15px;"
+          >
+            <h1
+              style="text-align: center; color: #f8d12e; background-color: #000;"
+            >
+              Welcome to the Best Digital Planner for 2025!
+            </h1>
+            <h3>
+              Thoughtfully designed for those who crave structure, focus and
+              personal growth, this planner offers:
+            </h3>
+            <ul style="font-size: 18px;">
+              <li style="margin-bottom: 10px;">
+                Weekly, monthly, and annual prompts to enhance organization and
+                productivity.
+              </li>
+
+              <li style="margin-bottom: 10px;">
+                Prayer and meditation sections for spiritual reflection.
+              </li>
+
+              <li style="margin-bottom: 10px;">
+                Practical tips for staying productive and fostering discipline.
+              </li>
+
+              <li style="margin-bottom: 10px;">Two vision boards.</li>
+
+              <li style="margin-bottom: 10px;">
+                Monthly inspirational quotes or motivational messages.
+              </li>
+
+              <li style="margin-bottom: 10px;">
+                Monthly overview, detailed weekly planner, and weekly reflection
+                sections.
+              </li>
+
+              <li style="margin-bottom: 10px;">
+                End-of-month notes and space for top three memories of the
+                month.
+              </li>
+
+              <li style="margin-bottom: 10px;">
+                Year-end review section for reflection and goal setting.
+              </li>
+
+              <li style="margin-bottom: 10px;">
+                A page for important dates to keep track of key moments.
+              </li>
+
+              <li style="margin-bottom: 10px;">
+                Hyperlinks to a vision board calendar and prompts for easy
+                access.
+              </li>
+
+              <li>
+                Designed to align productivity with personal development and
+                spiritual growth.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--call to action-->
+    <br />
+    <br />
+    <br />
+    <div style="text-align: center;" class="try-section">
+      <div>
+        <h1>Try Our Planner for Free Today!</h1>
+      </div>
+      <!--button-->
+      <div>
+        <a href="products.html">
+          <button class="button-view">View Products</button>
+        </a>
+      </div>
+    </div>
+    <!--review section-->
+    <div class="reviewSection">
+      <div class="col span_1_of_6">
+        <h1 class="reviewHeading">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          Reviews
+        </h1>
+      </div>
+      <div class="col span_5_of_6">
+        <div class="reviewContent">
+          <div class="reviews2">
+            <p>
+              <q
+                >This planner has transformed the way I approach my days! I love
+                how it integrates productivity with spiritual growth—it’s
+                exactly what I needed to stay focused and connected to my
+                faith.</q
+              >
+            </p>
+            <p style="text-align: right;">-Emily R.</p>
+          </div>
+          <div class="reviews2">
+            <p>
+              <q
+                >I’ve tried so many planners over the years, but this one stands
+                out. The vision boards and weekly prompts have made a huge
+                difference in keeping me disciplined and motivated!</q
+              >
+            </p>
+            <p style="text-align: right;">-Jordan T.</p>
+            <p></p>
+          </div>
+          <div class="reviews2">
+            <p>
+              <q
+                >This planner encourages reflection and growth in ways I didn’t
+                think were possible. From the inspirational quotes to the
+                monthly reviews, everything about it feels intentional and
+                meaningful.</q
+              >
+            </p>
+            <p style="text-align: right;">-Rebecca K.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="footerContainer">
+        <div class="footerColumn">
+          <a href="contact.html">Contact Us</a>
+          <br />
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footerColumn">
+          <a href="faq.html">FAQs</a>
+          <br />
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
