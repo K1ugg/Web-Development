@@ -2,7 +2,7 @@ import { addToCart } from '../data/cart.js';
 import {products} from '../data/products.js';
 
 
-function updateCartQuantity() {
+export function updateCartQuantity() {
     let cartQuantity = 0;
     
     cart.forEach((item) => {
@@ -31,32 +31,69 @@ document.querySelector('.js-add-to-cart-button').innerHTML =
   Add to Cart
 </button>
 `;
-*/
 
-//FIX FUNC
-function added() {
-    const buttonElement = document.querySelector('.js-add-to-cart-button');
 
-    if (buttonElement.innerText === 'Add to Cart') {
-        buttonElement.textContent = 'Added';
-} else {
-    buttonElement.innerHTML = 'Add to Cart';
-}
-}
 
-document.querySelector('.js-add-to-cart-button').innerHTML = `
-<button onclick = "added();"
+
+let addToCartButtonHTML = '';
+
+products.forEach((product)=> {
+
+addToCartButtonHTML += `
+<button 
   class="purchase-button js-add-to-cart" 
-  data-product-name="${products.name}">
+  data-product-name="${product.name}">
   Add to Cart
 </button>
 `;
 
+})
+*/
+
+const productContainer = document.querySelector('.js-product-detail');
+const productName = productContainer.dataset.productName;
+const product = getProduct(productName);
+
+if (product) {
+  // Handle "Buy Now" logic
+  const buyNowButton = document.querySelector('.js-buy-now-button');
+  buyNowButton.addEventListener('click', () => {
+    addToCart(product.name);
+    // Optional: updateCartQuantity(); if needed
+    window.location.href = 'cart.html';
+  });
+}
+
+
+/*
+const productContainer = document.querySelector('.js-product-detail');
+const productName = productContainer.dataset.productName;
+const product = getProduct(productName);
+
+if (product) {
+document.querySelector('.js-add-to-cart-button').innerHTML = `
+<button 
+  class="purchase-button js-add-to-cart" 
+  data-product-name="${product.name}">
+  Add to Cart
+</button>
+
+`;
+
+
+}
+*/
+
 document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
         button.addEventListener('click', () => {
-            const productName = button.dataset.products.name;
+            const productName = button.dataset.productName;
             addToCart(productName);  
+
+   
+        button.textContent = 'Added';
+        button.disabled = true;
+
             //updateCartQuantity();      
         });
     });

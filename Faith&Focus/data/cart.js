@@ -1,5 +1,6 @@
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
+
 if(!cart) {
     cart = [{
   productName: 'The Digital Planner',
@@ -8,8 +9,6 @@ if(!cart) {
   productName: 'The Productivity Bundle',
   quantity: 1,
 }];
-
-
 }
 
 function saveToStorage() {
@@ -39,6 +38,7 @@ export function addToCart(productName) {
             saveToStorage();
 }
 
+
 export function removeFromCart(productName) {
     const newCart = [];
 
@@ -51,4 +51,9 @@ export function removeFromCart(productName) {
     cart = newCart;
     saveToStorage();
 
+}
+
+export function clearCart() {
+  cart.splice(0, cart.length);
+  saveToStorage();
 }

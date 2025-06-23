@@ -319,6 +319,18 @@ button:hover
   transition: background-color 0.3s ease;
 }
 
+.checkout-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.js-delete-link:hover {
+  background-color:  #c00;
+  color:#ffe5e5;
+}
+
 .product-review
 {
   width: 100%;

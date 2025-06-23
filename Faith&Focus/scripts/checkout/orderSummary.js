@@ -1,6 +1,6 @@
 import { cart, removeFromCart } from '../../data/cart.js';
-import { products, getProduct } from '../../data/products.js';
-
+import { getProduct } from '../../data/products.js';
+import { paymentSummary } from './paymentSummary.js';
 
 export function orderSummary() {
 
@@ -10,41 +10,47 @@ export function orderSummary() {
     const productName = cartItem.productName;
 
     const matchingProduct = getProduct(productName);
+      //  if (!matchingProduct) return;  // skip undefined products
 
-    cartSummaryHTML += `
-    <div style="margin: 10px display: flex;">
-    <div style= "width: 30%;"><img src= "${matchingProduct.image}"></div>
+      cartSummaryHTML += `
+    <div class="checkout-item">
+    <div style= "width: 30%; height: auto;"><img src= "${matchingProduct.image}"></div>
    <div>
-   <div>${matchingProduct.name}</div>
+   <b>${matchingProduct.name}</b>
     <div>$${(matchingProduct.priceCents/100).toFixed(2)}</div>
     <div>
-    Quantity: <span> ${cartItem.quantity}</span>
-    
+    Quantity: ${cartItem.quantity}
+    <span class="delete-quantity-link js-delete-link" data-product-name="${matchingProduct.name}" style="cursor:pointer; margin-left:8px;">
+          Remove
+        </span>
+        
         </div>
     </div>
     </div>
-    </br>`;
+    `;
   });
 
-  document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
+//js-delete-link-${matchingProduct.name}
+  
+document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
 
-  /*<span class="delete-quantity-link js-delete-link" data-product-name="${matchingProduct.name}">
-          Remove
-        </span>
+ 
   document.querySelectorAll('.js-delete-link')
   .forEach((link) => {
     link.addEventListener('click', () => {
+      
       const productName = link.dataset.productName;
+     
       removeFromCart(productName);
-
+      
       const container = document.querySelector(
         `.js-cart-item-container-${productName}`
       );
       container.remove();
-      payment...()
+      paymentSummary();
     });
   });
-  */
+  
 }
-console.log(cart);
+
 orderSummary();

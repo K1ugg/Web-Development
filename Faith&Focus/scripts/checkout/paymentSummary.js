@@ -1,6 +1,5 @@
-import { cart } from "../../data/cart.js";
+import { cart, clearCart } from "../../data/cart.js";
 import { getProduct } from "../../data/products.js";
-
 
 export function paymentSummary() {
 
@@ -9,6 +8,10 @@ export function paymentSummary() {
 
 cart.forEach((cartItem) => {
   const product = getProduct(cartItem.productName);
+ /*  if (!product) {
+      console.warn(`No product found for ‘${cartItem.productName}’, skipping.`); 
+      return; 
+    }*/
   productPriceCents += product.priceCents * cartItem.quantity;
   cartQuantity += cartItem.quantity;
 });
@@ -19,7 +22,7 @@ const total = productPriceCents + taxCents;
 const paymentSummaryHTML = `
 
 <div>
-                <h1>Ready to Unlock Your Best Self?</h1>
+                <h1>Are You Ready to Unlock Your Best Self?</h1>
 <h3 style="margin: 20px;">Order Summary</h3>
 
 <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
@@ -47,10 +50,20 @@ const paymentSummaryHTML = `
               </div>
               <br />
               <a href="action_page.html">
-                <button class="buy-now">Get My Planner Now</button>
+                <button class="buy-now js-get-now">Get My Planner Now</button>
               </a>
 `;
 
-document.querySelector('.js-payment-summary') .innerHTML = paymentSummaryHTML;
+document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
+
+const getNowBtn = document.querySelector('.js-get-now');
+getNowBtn.addEventListener('click', () => {
+  clearCart();
+});
 
 }
+
+/*
+
+
+*/
