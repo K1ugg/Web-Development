@@ -247,14 +247,14 @@ button:hover
   align-items: center;
 }
 
-.products-grid .product-container {
+.product-container {
     padding-top: 40px;
     padding-bottom: 25px;
     padding-left: 25px;
     padding-right: 25px;
-    border-right: 1px solid rgb(231, 231, 231);
-    border-bottom: 1px solid rgb(231, 231, 231);
+    border: 1px solid rgb(32, 30, 30);
     display: flex;
+    background-color: #fff;
     flex-direction: column;
 }
 

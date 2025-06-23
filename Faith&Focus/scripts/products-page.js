@@ -1,14 +1,6 @@
-const products = [{
-    image: 'img/Digital-Planner-cover-on-ipad.jpg',
-    name: 'The Digital Planner',
-    priceCents: 2099,
-    page: 'planner.html'
-}, {
-    image: 'img/weekly-planner-on-ipad.png',
-    name: 'The Productivity Bundle',
-    priceCents: 999,
-    page: 'bundle.html'
-}];
+import {cart, addToCart} from '../data/cart.js';
+import {products} from '../data/products.js';
+
 
 let productsHTML = '';
 
@@ -16,7 +8,7 @@ products.forEach((product) => {
     
     productsHTML += `
     <div class="col span_6_of_12">
-    <div class="product-container>
+    <div class="product-container">
     <div class="product-image-container">
 <img class="product-image" src="${product.image}">
     </div>
@@ -34,7 +26,8 @@ products.forEach((product) => {
 `;
 });
 
-console.log(productsHTML);
+//console.log(productsHTML);
 
-document.querySelector('.js-products-grid')
-.innerHTML = productsHTML;
+document.querySelector('.js-products-grid').innerHTML = productsHTML;
+
+

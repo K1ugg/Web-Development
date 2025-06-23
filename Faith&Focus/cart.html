@@ -75,43 +75,24 @@
       <div class="section group">
         <div class="product-page">
           <div class="col span_6_of_12">
-            <div class="big-image" style="padding: 10px">
-              <img
+            <div class="big-image">
+              <div>
+                <h3 style="font-size: 20px;">
+                  <u>Review your order</u>
+                </h3>
+              <br>
+              </div>
+              <div class="js-order-summary" ></div>
+
+              <!--img
                 src="img/digital-planner-productivity-tools.png"
                 alt="Ordered product image"
-              />
+              /-->
             </div>
           </div>
           <div class="col span_6_of_12">
-            <div class="textContent" style="text-align: center; margin: 30px;">
-              <div>
-                <h1>Ready to Complete Your Purchase?</h1>
-                <h2>Your Digital Planner Awaits!</h2>
-                <br />
-                <h3>
-                  <u>Review order</u>
-                </h3>
-                <p>Item: The Faith & Focus Digital Planner</p>
-                <p>
-                  Cost: $19.99 <br />Estimated Tax: $0.00 <br />
-                  ___________________
-                </p>
-                <p>
-                  <strong>Order Total: $19.99</strong>
-                </p>
-                <br />
-                <p>Enter your email address to receive your copy:</p>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  required
-                />
-              </div>
-              <br />
-              <a href="action_page.html">
-                <button class="buy-now">Get My Planner Now</button>
-              </a>
+            <div class="textContent js-payment-summary" style="text-align: center; padding: 20px;">
+              
             </div>
           </div>
         </div>
@@ -133,5 +114,8 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="scripts/checkout.js"></script>
+
   </body>
 </html>
