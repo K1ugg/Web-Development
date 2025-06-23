@@ -12,23 +12,25 @@ export function orderSummary() {
     const matchingProduct = getProduct(productName);
 
     cartSummaryHTML += `
-    <div style="margin: 10px;">
+    <div style="margin: 10px display: flex;">
     <div style= "width: 30%;"><img src= "${matchingProduct.image}"></div>
-    <div>${matchingProduct.name}</div>
+   <div>
+   <div>${matchingProduct.name}</div>
     <div>$${(matchingProduct.priceCents/100).toFixed(2)}</div>
     <div>
     Quantity: <span> ${cartItem.quantity}</span>
     
-        <span class="delete-quantity-link js-delete-link" data-product-name="${matchingProduct.name}">
-          Remove
-        </span>
+        </div>
     </div>
     </div>
     </br>`;
-  })
+  });
 
   document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
 
+  /*<span class="delete-quantity-link js-delete-link" data-product-name="${matchingProduct.name}">
+          Remove
+        </span>
   document.querySelectorAll('.js-delete-link')
   .forEach((link) => {
     link.addEventListener('click', () => {
@@ -39,8 +41,10 @@ export function orderSummary() {
         `.js-cart-item-container-${productName}`
       );
       container.remove();
+      payment...()
     });
   });
+  */
 }
-
+console.log(cart);
 orderSummary();

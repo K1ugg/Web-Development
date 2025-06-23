@@ -24,20 +24,17 @@ const paymentSummaryHTML = `
 
 <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
   <span>Items (${cartQuantity})</span>
-  <span>$${(productPriceCents/ 100).toFixed(2)}
-</span>
+  <span>$${(productPriceCents/ 100).toFixed(2)}</span>
 </div>
 
 <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
   <span>Estimated Tax</span>
-  <span> $${(taxCents/ 100).toFixed(2)}
-</span>
+  <span> $${(taxCents/ 100).toFixed(2)}</span>
 </div>
 
 <div style="display: flex; justify-content: space-between; font-weight: bold; border-top: 1px solid #ccc; padding-top: 10px;">
   <span>Order Total</span>
-  <span> $${(total/ 100).toFixed(2)}
-</span>
+  <span> $${(total/ 100).toFixed(2)}</span>
 </div>
 
  <p>Enter your email address to receive your copy:</p>

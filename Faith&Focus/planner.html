@@ -76,10 +76,14 @@
         <div class="product-page">
           <div class="col span_6_of_12">
             <div class="big-image" style="margin: 60px;">
-              <img
-                src="img/Digital-Planner-cover-on-ipad.jpg"
-                alt="Digital planner cover showcasing a modern,minimalist design"
-              />
+              <div class="simple-slideshow" style="width:70%;">
+                <img class="slide" src="img/Digital-Planner-cover-on-ipad.jpg" alt="Digital planner cover showcasing a modern,minimalist design" />
+                <img class="slide" src="img/inspirational-quotes-faith-planner.jpg" alt="Inspirational quote page from Faith & Focus Planner for reflection and motivation" />
+                
+                <img class="slide" src="img/faith-focus-prayer-prompts.jpg" alt="Guided prayer prompts designed to deepen spiritual connection and focus" />
+                <img class="slide" src="img/faith-focus-monthly-calender.jpg" alt="Faith & Focus Planner calender" />
+                <img class="slide" src="img/faith-focus-monthly-reflection.png" alt="Monthly review section for reflection, progress, tracking and goal adjustments" />
+              </div>
             </div>
           </div>
 
@@ -110,58 +114,7 @@
         </div>
       </div>
     </div>
-    <div class="small-images" style="padding: 50px;">
-      <div class="section group">
-        <div class="col span_3_of_12">
-          <img
-            src="img/faith-focus-monthly-calender.jpg"
-            alt="Faith & Focus Planner calender"
-          />
-        </div>
-        <div class="col span_3_of_12">
-          <img
-            src="img/inspirational-quotes-faith-planner.jpg"
-            alt="Inspirational quote page from Faith & Focus Planner for reflection and motivation"
-          />
-        </div>
-        <div class="col span_3_of_12">
-          <img
-            src="img/faith-focus-prayer-prompts.jpg"
-            alt="Guided prayer prompts designed to deepen spiritual connection and focus"
-          />
-        </div>
-        <div class="col span_3_of_12">
-          <img
-            src="img/planner-daily-tasks-checklist.jpg"
-            alt="Faith & Focus weekly spread for scheduling tasks and goals"
-          />
-        </div>
-        <div class="col span_3_of_12">
-          <img
-            src="img/faith-focus-monthly-planner-template.jpg"
-            alt="Monthly planner layout for tracking goals, events and reflection"
-          />
-        </div>
-        <div class="col span_3_of_12">
-          <img
-            src="img/faith-focus-monthly-reflection.png"
-            alt="Monthly review section for reflection, progress, tracking and goal adjustments"
-          />
-        </div>
-        <div class="col span_3_of_12">
-          <img
-            src="img/goal-setting-prompts-planner.png"
-            alt="Faith & Focus Planner monthly prompts for personal and spiritual growth"
-          />
-        </div>
-        <div class="col span_2_of_12">
-          <img
-            src="img/faith-focus-inspirational-quote-2.png"
-            alt="Additional inspirational quote page from the Faith & Focus Planner to encourage mindfulness"
-          />
-        </div>
-      </div>
-    </div>
+    
     <div class="reviews2" style="margin: 30px;">
       <div style="text-align: center; ">
         <h2>Customer Reviews</h2>
@@ -186,7 +139,28 @@
       </div>
     </footer>
 
-     <!--<script type="module" src="scripts/products.js"></script>
+     
+     <script>
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName('slide');
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 1000); //change every second
+  }
+
+  showSlides();
+</script>
+
+<!--<script type="module" src="scripts/products.js"></script>
   -->
+
   </body>
 </html>

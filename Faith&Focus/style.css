@@ -297,6 +297,16 @@ button:hover
   flex-wrap: flex-wrap;
 }
 
+.simple-slideshow {
+  max-width: 100%;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
 .purchase-button
 {
   background-color: #333;

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Our PDF planner includes hyperlinked tabs, goal-setting tools and seamless digital compatibility"
+      content="Everything you need to kick-start goal-setting—in one powerful PDF bundle."
     />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -12,7 +12,7 @@
       type="image/x-icon"
       href="img/brand-logo-1-digital-planner.png"
     />
-    <title>Customizable & Hyperlinked Digital Planner - Download Now!</title>
+    <title>90-Day Productivity Bundle - Try It Now!</title>
   </head>
   <body>
     <!--header section-->
@@ -76,10 +76,12 @@
         <div class="product-page">
           <div class="col span_6_of_12">
             <div class="big-image" style="margin: 60px;">
-              <img
-                src="img/weekly-planner-on-ipad.png"
-                alt="Weekly planner cover showcasing a modern,minimalist design"
-              />
+              <div class="simple-slideshow" style="width:70%;">
+                <img class="slide" src="img/weekly-planner-on-ipad.png" alt="Weekly planner cover showcasing a modern,minimalist design" />
+                <img class="slide" src="img/faith-focus-monthly-planner-template.jpg" alt="Monthly planner layout for tracking goals, events and reflection" />
+                <img class="slide" src="img/planner-daily-tasks-checklist.jpg" alt="Faith & Focus weekly spread for scheduling tasks and goals" />
+                <img class="slide" src="img/faith-focus-inspirational-quote-2.png" alt="Additional inspirational quote page from the Faith & Focus Planner to encourage mindfulness" />
+              </div>
             </div>
           </div>
 
@@ -89,17 +91,16 @@
                90-Day Productivity Bundle
               </h1>
               <p>
-                Refocus your energy with this all-in-one planning set. Featuring Weekly and Monthly Planner Pages, 3 Motivational Quote Pages, and a Productivity Tip Page full of actionable insights, it’s everything you need to stay on track for the next three months. Whether you're rebooting your routine or starting fresh, this bundle is your personal roadmap to clarity and progress.  <br />
+                Refocus your energy with this all-in-one planning set. Featuring Weekly and Monthly Planner Pages, Motivational Quote Pages, and a Productivity Tip Page full of actionable insights, it’s everything you need to stay on track for the next three months. Whether you're rebooting your routine or starting fresh, this bundle is your personal roadmap to clarity and progress.  <br />
                 <br />Refocus your journey and stay on track with the 90-Day Productivity Bundle.
               </p>
               <br />
               <p><strong>Cost:</strong> $9.99</p>
-              <a href="cart.html">
-                 <button class="purchase-button">Buy Now</button>
+              <div><a href="cart.html">
+                 <button class="purchase-button js-add-to-cart">Buy Now</button>
               </a>
-              <a href="cart.html">
-                <button class="purchase-button js-add-to-cart js-add-to-cart-button"></button>
-              </a>
+                <span class="js-add-to-cart-button"></span>
+                </div>
             </div>
           </div>
         </div>
@@ -130,7 +131,26 @@
       </div>
     </footer>
 
-        <!--script type="module" src="scripts/product-page.js"></script-->
+<script>
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName('slide');
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 1000); //change every second
+  }
+
+  showSlides();
+</script>
+
+        <script type="module" src="scripts/product-details.js"></script>
 
   </body>
 </html>
