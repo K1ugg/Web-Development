@@ -9,7 +9,7 @@ export function getProduct(productName) {
 
     return matchingProduct;
 }
-
+   
 
 export const products = [{
     image: 'img/Digital-Planner-cover-on-ipad.jpg',

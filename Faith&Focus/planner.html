@@ -88,7 +88,7 @@
           </div>
 
           <div class="col span_6_of_12">
-            <div class="products-Content" style="text-align: center;">
+            <div class="products-Content js-product-detail" data-product-name='The Digital Planner' style="text-align: center;">
               <h1 style="color: #f8d12e; background-color: #000;">
                 Your Ultimate Digital Planner for Daily Organization
               </h1>
@@ -103,12 +103,13 @@
               </p>
               <br />
               <p><strong>Cost:</strong> $20.99</p>
-              <a href="cart.html">
-                <button class="purchase-button">Buy Now</button>
+              <div style = "justify-content: center; display: flex; gap: 10px;">
+                <a href="cart.html">
+                 <button class="purchase-button js-buy-now-button">Buy Now</button>
               </a>
-              <a href="cart.html">
-                <button class="purchase-button js-add-to-cart" data-product-name='The Digital Planner'>Add to Cart</button>
-              </a>
+                <div class="js-add-to-cart-button" ></div>
+                </div>
+            </div>
             </div>
           </div>
         </div>
@@ -159,8 +160,8 @@
   showSlides();
 </script>
 
-<!--<script type="module" src="scripts/products.js"></script>
-  -->
+<script type="module" src="scripts/product-details.js"></script>
+  
 
   </body>
 </html>

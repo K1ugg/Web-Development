@@ -1,5 +1,5 @@
-import { addToCart } from '../data/cart.js';
-import {products} from '../data/products.js';
+import { cart, addToCart } from '../data/cart.js';
+import {products, getProduct} from '../data/products.js';
 
 
 export function updateCartQuantity() {
@@ -11,7 +11,87 @@ export function updateCartQuantity() {
 
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 }
-/*
+
+
+const productContainer = document.querySelector('.js-product-detail');
+const productName = productContainer.dataset.productName;
+const product = getProduct(productName);
+
+if (product) {
+  const buyNowButton = document.querySelector('.js-buy-now-button');
+  const addToCartButton = document.querySelector('.js-add-to-cart-button');
+
+
+    addToCartButton.innerHTML = `
+<button
+  class="purchase-button js-add-to-cart" 
+  data-product-name="${product.name}">
+  Add to Cart
+</button>
+`;
+
+const addToCartBtn = addToCartButton.querySelector('.js-add-to-cart');      
+
+
+if (addToCartBtn) {
+
+    addToCartBtn.addEventListener('click', () => {
+      alert('Added to cart!');
+      
+      addToCart(product.name);
+      updateCartQuantity();
+    });
+
+  }
+
+if(buyNowButton){
+  buyNowButton.addEventListener('click', () => {
+    addToCart(product.name);
+    updateCartQuantity();
+  });
+  }
+     
+}
+
+
+
+
+
+
+/*document.querySelector('.js-add-to-cart-button').innerHTML = addToCartButtonHTML;
+
+
+document.querySelectorAll('.js-add-to-cart')
+    .forEach((button) => {
+        button.addEventListener('click', () => {
+            const productName = button.dataset.productName;
+            addToCart(productName);  
+            updateCartQuantity();
+   
+        button.textContent = 'Added';
+        button.disabled = true;
+   
+        });
+    });
+
+
+
+
+const productContainer = document.querySelector('.js-product-detail');
+const productName = productContainer.dataset.productName;
+const product = getProduct(productName);
+
+if (product) {
+  
+document.querySelector('.js-add-to-cart-button').innerHTML = `
+<button 
+  class="purchase-button js-add-to-cart" 
+  data-product-name="${product.name}">
+  Add to Cart
+</button>
+ 
+`;
+
 document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
         button.addEventListener('click', () => {
@@ -32,68 +112,23 @@ document.querySelector('.js-add-to-cart-button').innerHTML =
 </button>
 `;
 
-
-
-
 let addToCartButtonHTML = '';
 
 products.forEach((product)=> {
 
-addToCartButtonHTML += `
-<button 
-  class="purchase-button js-add-to-cart" 
-  data-product-name="${product.name}">
-  Add to Cart
-</button>
-`;
-
-})
-*/
-
-const productContainer = document.querySelector('.js-product-detail');
-const productName = productContainer.dataset.productName;
-const product = getProduct(productName);
-
-if (product) {
-  // Handle "Buy Now" logic
-  const buyNowButton = document.querySelector('.js-buy-now-button');
-  buyNowButton.addEventListener('click', () => {
-    addToCart(product.name);
-    // Optional: updateCartQuantity(); if needed
-    window.location.href = 'cart.html';
-  });
-}
-
-
-/*
-const productContainer = document.querySelector('.js-product-detail');
-const productName = productContainer.dataset.productName;
-const product = getProduct(productName);
-
-if (product) {
-document.querySelector('.js-add-to-cart-button').innerHTML = `
-<button 
-  class="purchase-button js-add-to-cart" 
-  data-product-name="${product.name}">
-  Add to Cart
-</button>
-
-`;
-
-
-}
-*/
 
 document.querySelectorAll('.js-add-to-cart')
+
     .forEach((button) => {
         button.addEventListener('click', () => {
             const productName = button.dataset.productName;
             addToCart(productName);  
-
+            updateCartQuantity();
    
         button.textContent = 'Added';
         button.disabled = true;
 
-            //updateCartQuantity();      
+            //();      
         });
     });
+    */
