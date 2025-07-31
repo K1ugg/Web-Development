@@ -1,11 +1,13 @@
+// Import cart functionlity and product data
 import {cart, addToCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 
-
+// Initialize empty HTML string to hold product cards
 let productsHTML = '';
 
+// Loop through each product in the products array
 products.forEach((product) => {
-    
+    // Build the HTML markup for each product
     productsHTML += `
     <div class="col span_6_of_12">
     <div class="product-container">
@@ -26,8 +28,7 @@ products.forEach((product) => {
 `;
 });
 
-//console.log(productsHTML);
-
+// Inject the generated HTML into the container element on the page
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 

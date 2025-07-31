@@ -35,7 +35,8 @@
           </a>
         </div>
       </div>
-      <!--cart-->
+
+      <!-- shopping cart icon with link to cart page-->
       <div class="cart">
         <a href="cart.html">
           <button class="cart-button">
@@ -70,10 +71,11 @@
       </ul>
     </div>
 
-    <!--main content-->
+    <!--main product content-->
     <div class="mainContainer" style="display: flex; gap: 3000px;">
       <div class="section group">
         <div class="product-page">
+          <!-- slideshow with product images-->
           <div class="col span_6_of_12">
             <div class="big-image" style="margin: 60px;">
               <div class="simple-slideshow" style="width:70%;">
@@ -85,6 +87,7 @@
             </div>
           </div>
 
+          <!--Product description and purchase options-->
           <div class="col span_6_of_12">
             <div class="products-Content js-product-detail" data-product-name="The Productivity Bundle" style="text-align: center;">
               <h1 style="color: #f8d12e; background-color: #000;">
@@ -108,6 +111,7 @@
       </div>
     </div>
     
+    <!--Customer reviews section-->
     <div class="reviews2" style="margin: 30px;">
       <div style="text-align: center; ">
         <h2>Customer Reviews</h2>
@@ -132,6 +136,7 @@
       </div>
     </footer>
 
+    <!--JavaScript: Slideshow functionality-->
 <script>
   let slideIndex = 0;
   const slides = document.getElementsByClassName('slide');
@@ -150,7 +155,7 @@
 
   showSlides();
 </script>
-
+<!--External JS module for product details-->
         <script type="module" src="scripts/product-details.js"></script>
 
   </body>
